@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Payment Admin Panel</title>
+<link rel="stylesheet" href="Styles/dashboard.css">
+</head>
+<body>
+
+<div class="sidebar glass">
+    <div class="logo">💳 PayAdmin</div>
+    <ul>
+        <li class="active" data-section="dashboard">Dashboard</li>
+        <li data-section="payments">Payments</li>
+        <li data-section="users">Users</li>
+        <li data-section="reports">Reports</li>
+        <li data-section="settings">Settings</li>
+        <li id="logoutBtn">Logout</li>
+    </ul>
+</div>
+
+<div class="main-content">
+    <!-- Dashboard Section -->
+    <div class="section" id="dashboard">
+        <h1>Dashboard</h1>
+
+        <!-- Cards -->
+        <div class="cards">
+            <div class="card">
+                <h3>Total Payments</h3>
+                <p>$12,345</p>
+            </div>
+            <div class="card">
+                <h3>Pending Payments</h3>
+                <p>$3,210</p>
+            </div>
+            <div class="card">
+                <h3>Total Users</h3>
+                <p>150</p>
+            </div>
+        </div>
+
+        <!-- Users Table -->
+        <div class="users-table">
+            <h2>All Users</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>User ID</th>
+                        <th>Full Name</th>
+                        <th>Email</th>
+                        <th>Total Payments</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>#001</td>
+                        <td>John Doe</td>
+                        <td>john@example.com</td>
+                        <td>$500</td>
+                        <td>Active</td>
+                    </tr>
+                    <tr>
+                        <td>#002</td>
+                        <td>Jane Smith</td>
+                        <td>jane@example.com</td>
+                        <td>$300</td>
+                        <td>Active</td>
+                    </tr>
+                    <tr>
+                        <td>#003</td>
+                        <td>Bob Johnson</td>
+                        <td>bob@example.com</td>
+                        <td>$700</td>
+                        <td>Inactive</td>
+                    </tr>
+                    <tr>
+                        <td>#004</td>
+                        <td>Alice Williams</td>
+                        <td>alice@example.com</td>
+                        <td>$1,200</td>
+                        <td>Active</td>
+                    </tr>
+                    <tr>
+                        <td>#005</td>
+                        <td>Michael Brown</td>
+                        <td>michael@example.com</td>
+                        <td>$850</td>
+                        <td>Active</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Payments Section -->
+    <div class="section" id="payments" style="display:none;">
+        <h1>Payments</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Payment ID</th>
+                    <th>User</th>
+                    <th>Amount</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>#001</td>
+                    <td>John Doe</td>
+                    <td>$120</td>
+                    <td>Completed</td>
+                    <td><button class="viewBtn">View</button></td>
+                </tr>
+                <tr>
+                    <td>#002</td>
+                    <td>Jane Smith</td>
+                    <td>$300</td>
+                    <td>Pending</td>
+                    <td><button class="viewBtn">View</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Users Section -->
+    <div class="section" id="users" style="display:none;">
+        <h1>Users</h1>
+        <p>Manage all users here.</p>
+    </div>
+
+    <!-- Reports Section -->
+    <div class="section" id="reports" style="display:none;">
+        <h1>Reports</h1>
+        <p>View detailed payment reports.</p>
+    </div>
+
+    <!-- Settings Section -->
+    <div class="section" id="settings" style="display:none;">
+        <h1>Settings</h1>
+        <p>Change admin settings.</p>
+    </div>
+</div>
+
+<!-- Modal -->
+<div id="modal" class="modal">
+    <div class="modal-content glass">
+        <span class="close">&times;</span>
+        <h2>Payment Details</h2>
+        <p>Details for the selected payment will appear here.</p>
+    </div>
+</div>
+
+<script src="frontend/frontend.js"></script>
+<script src="frontend/dashboard.js"></script>
+</body>
+</html>

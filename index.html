@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login / Register</title>
+<link rel="stylesheet" href="Styles/index.css">
+</head>
+<body>
+
+<div class="container glass">
+    <h1>Welcome</h1>
+
+    <!-- Tabs -->
+    <div class="form-tabs">
+        <button id="tabLogin" class="active">Login</button>
+        <button id="tabRegister">Register</button>
+    </div>
+
+    <!-- Login Form -->
+    <form id="loginForm" class="form active">
+        <input type="email" id="email" placeholder="Email" required>
+        <input type="password" id="password" placeholder="Password" required>
+        <div class="forgot-reset">
+            <a href="#" id="forgotPassword">Forgot Password?</a>
+        </div>
+        <button type="submit">Login</button>
+    </form>
+
+    <!-- Register Form -->
+    <form id="registerForm" class="form">
+        <input type="email" id="regEmail" placeholder="Email" required>
+        <input type="password" id="regPassword" placeholder="Password" required>
+        <input type="password" id="regConfirm" placeholder="Confirm Password" required>
+        <div class="forgot-reset">
+            <a href="#" id="resetPassword">Reset Password</a>
+        </div>
+        <button type="submit">Register</button>
+    </form>
+</div>
+
+<!-- Notification Modal -->
+<div id="notifyModal" class="modal">
+    <div class="modal-content glass">
+        <span class="close">&times;</span>
+        <h2 id="notifyTitle">Notification</h2>
+        <p id="notifyText">Message goes here...</p>
+    </div>
+</div>
+
+<script src="frontend/frontend.js"></script>
+<script src="frontend/index.js"></script>
+</body>
+</html>
